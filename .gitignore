@@ -1,0 +1,45 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Virtual environments and local tooling
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+.tools/
+
+# Generated RAG artifacts
+embeddings/*
+!embeddings/README.md
+indexes/*
+!indexes/README.md
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/README.md
+
+# Generated evaluation logs; QA files are kept
+eval/preds_*.jsonl
+eval/judge_*.jsonl
+eval/safety_logs/*.jsonl
+
+# Local scratch files
+qa.txt
+report.pdf
+demo.mp4

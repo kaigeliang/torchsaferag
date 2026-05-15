@@ -1,0 +1,21 @@
+use_rerank: true
+similarity_threshold: 0.3
+top_k: 5
+temperature: 0.3
+max_new_tokens: 200
+max_steps: 4
+enable_keyword_guard: true
+high_risk_keywords:
+- password
+- token
+- secret
+- credential
+- api key
+- ssh
+poisoning:
+  poisoned_index_dir: indexes/poisoned
+  clean_index_dir: indexes
+  poison_chunk_dir: data/poison
+prompt_injection:
+  attacks_file: scripts/safety/attack_templates.yaml
+  num_attacks: 30
